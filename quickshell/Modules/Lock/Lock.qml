@@ -49,6 +49,12 @@ Scope {
             lock();
     }
 
+    function notifyLockedHint(locked: bool) {
+        if (!SettingsData.loginctlLockIntegration || !DMSService.isConnected)
+            return;
+        DMSService.setLockedHint(locked, () => {});
+    }
+
     function notifyLoginctl(lockAction: bool) {
         if (!SettingsData.loginctlLockIntegration || !DMSService.isConnected)
             return;
@@ -217,6 +223,7 @@ Scope {
         target: sessionLock
 
         function onLockedChanged() {
+            notifyLockedHint(sessionLock.locked);
             if (sessionLock.locked) {
                 pendingLock = false;
                 if (lockPowerOffArmed && SettingsData.lockScreenPowerOffMonitorsOnLock) {
