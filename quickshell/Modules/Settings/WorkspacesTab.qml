@@ -198,6 +198,10 @@ Item {
                 }
             }
 
+            WorkspaceAppearanceCard {
+                width: parent.width
+            }
+
             SettingsCard {
                 width: parent.width
                 iconName: "label"
