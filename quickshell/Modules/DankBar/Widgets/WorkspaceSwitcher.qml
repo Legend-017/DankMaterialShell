@@ -184,25 +184,55 @@ Item {
         }
 
         if (!root.screenName || SettingsData.workspaceFollowFocus) {
-            return workspaces.slice().sort((a, b) => a.num - b.num).map(mapWorkspace);
+            return workspaces.slice().sort(swayWorkspaceOrder).map(mapWorkspace);
         }
 
         const monitorWorkspaces = workspaces.filter(ws => ws.monitor?.name === root.screenName);
-        return monitorWorkspaces.length > 0 ? monitorWorkspaces.sort((a, b) => a.num - b.num).map(mapWorkspace) : [
+        return monitorWorkspaces.length > 0 ? monitorWorkspaces.sort(swayWorkspaceOrder).map(mapWorkspace) : [
             {
                 "num": 1
             }
         ];
     }
 
+    // Numbered workspaces first in ascending order; purely-named workspaces (sway reports num -1) after, by name
+    function swayWorkspaceOrder(a, b) {
+        const keyA = a.num === -1 ? Number.MAX_SAFE_INTEGER : a.num;
+        const keyB = b.num === -1 ? Number.MAX_SAFE_INTEGER : b.num;
+        if (keyA !== keyB)
+            return keyA - keyB;
+        return (a.name ?? "").localeCompare(b.name ?? "");
+    }
+
+    // Sway reports num -1 for purely-named workspaces, so identity must fall back to name
+    function swayWorkspaceKey(ws) {
+        return ws.num !== -1 ? ws.num : ws.name;
+    }
+
+    function escapeSwayWorkspaceName(name) {
+        return String(name ?? "").replace(/\\/g, "\\\\").replace(/"/g, "\\\"");
+    }
+
+    function dispatchSwayWorkspace(ws) {
+        if (!ws)
+            return;
+        try {
+            if (ws.num !== undefined && ws.num !== -1) {
+                I3.dispatch(`workspace number ${ws.num}`);
+            } else if (ws.name) {
+                I3.dispatch(`workspace "${escapeSwayWorkspaceName(ws.name)}"`);
+            }
+        } catch (_) {}
+    }
+
     function getSwayActiveWorkspace() {
         if (!root.screenName || SettingsData.workspaceFollowFocus) {
             const focusedWs = I3.workspaces?.values?.find(ws => ws.focused === true);
-            return focusedWs ? focusedWs.num : 1;
+            return focusedWs ? swayWorkspaceKey(focusedWs) : 1;
         }
 
         const focusedWs = I3.workspaces?.values?.find(ws => ws.monitor?.name === root.screenName && ws.focused === true);
-        return focusedWs ? focusedWs.num : 1;
+        return focusedWs ? swayWorkspaceKey(focusedWs) : 1;
     }
 
     // Numbered workspaces first in id order, named (negative id) after, by name
@@ -423,7 +453,8 @@ Item {
             };
         } else if (CompositorService.isSway || CompositorService.isScroll || CompositorService.isMiracle) {
             placeholder = {
-                "num": -1
+                "num": -1,
+                "_placeholder": true
             };
         } else {
             placeholder = -1;
@@ -586,7 +617,7 @@ Item {
             if (root.isMango)
                 return ws && ws.tag !== -1;
             if (CompositorService.isSway || CompositorService.isScroll || CompositorService.isMiracle)
-                return ws && ws.num !== -1;
+                return ws && !ws._placeholder;
             return ws !== -1;
         });
     }
@@ -618,10 +649,7 @@ Item {
         case "sway":
         case "scroll":
         case "miracle":
-            if (data.num)
-                try {
-                    I3.dispatch(`workspace number ${data.num}`);
-                } catch (_) {}
+            dispatchSwayWorkspace(data);
             break;
         }
     }
@@ -720,7 +748,7 @@ Item {
                 return;
             }
 
-            const currentIndex = realWorkspaces.findIndex(ws => ws.num === root.currentWorkspace);
+            const currentIndex = realWorkspaces.findIndex(ws => swayWorkspaceKey(ws) === root.currentWorkspace);
             const validIndex = currentIndex === -1 ? 0 : currentIndex;
             const nextIndex = direction > 0 ? Math.min(validIndex + 1, realWorkspaces.length - 1) : Math.max(validIndex - 1, 0);
 
@@ -728,9 +756,7 @@ Item {
                 return;
             }
 
-            try {
-                I3.dispatch(`workspace number ${realWorkspaces[nextIndex].num}`);
-            } catch (_) {}
+            dispatchSwayWorkspace(realWorkspaces[nextIndex]);
         }
     }
 
@@ -744,7 +770,7 @@ Item {
         if (root.isMango)
             return (modelData?.tag !== undefined) ? (modelData.tag + 1) : "";
         if (CompositorService.isSway || CompositorService.isScroll || CompositorService.isMiracle)
-            return modelData?.num || "";
+            return (modelData?.num !== undefined && modelData.num !== -1) ? modelData.num : (modelData?.name ?? "");
         return modelData - 1;
     }
 
@@ -759,7 +785,7 @@ Item {
         } else if (root.isMango) {
             isPlaceholder = modelData?.tag === -1;
         } else if (CompositorService.isSway || CompositorService.isScroll || CompositorService.isMiracle) {
-            isPlaceholder = modelData?.num === -1;
+            isPlaceholder = modelData?._placeholder === true;
         } else {
             isPlaceholder = modelData === -1;
         }
@@ -1059,7 +1085,7 @@ Item {
                     if (root.isMango)
                         return !!(modelData && root.dwlActiveTags.includes(modelData.tag));
                     if (CompositorService.isSway || CompositorService.isScroll || CompositorService.isMiracle)
-                        return !!(modelData && modelData.num === root.currentWorkspace);
+                        return !!(modelData && root.swayWorkspaceKey(modelData) === root.currentWorkspace);
                     return modelData === root.currentWorkspace;
                 }
                 property bool isOccupied: {
@@ -1081,7 +1107,7 @@ Item {
                     if (root.isMango)
                         return !!(modelData && modelData.tag === -1);
                     if (CompositorService.isSway || CompositorService.isScroll || CompositorService.isMiracle)
-                        return !!(modelData && modelData.num === -1);
+                        return !!(modelData && modelData._placeholder);
                     return modelData === -1;
                 }
                 property bool isHovered: mouseArea.containsMouse
@@ -1397,10 +1423,8 @@ Item {
                                 HyprlandService.focusWorkspace(root.hyprlandWorkspaceSelector(modelData));
                             } else if (root.isMango && modelData?.tag !== undefined) {
                                 MangoService.switchToTag(root.screenName, modelData.tag);
-                            } else if ((CompositorService.isSway || CompositorService.isScroll || CompositorService.isMiracle) && modelData?.num) {
-                                try {
-                                    I3.dispatch(`workspace number ${modelData.num}`);
-                                } catch (_) {}
+                            } else if ((CompositorService.isSway || CompositorService.isScroll || CompositorService.isMiracle) && modelData?.num !== undefined) {
+                                root.dispatchSwayWorkspace(modelData);
                             }
                         } else if (mouse.button === Qt.RightButton) {
                             if (CompositorService.isNiri) {
