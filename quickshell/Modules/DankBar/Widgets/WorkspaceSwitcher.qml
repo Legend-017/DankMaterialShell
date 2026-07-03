@@ -1283,6 +1283,13 @@ Item {
                 readonly property color quickshellIconActiveColor: getContrastingIconColor(activeColor)
                 readonly property color quickshellIconInactiveColor: getContrastingIconColor(unfocusedColor)
 
+                readonly property color requestedColor: isActive ? activeColor : isUrgent ? urgentColor : isPlaceholder ? Theme.surfaceTextLight : isHovered ? Theme.withAlpha(unfocusedColor, 0.7) : isOccupied ? occupiedColor : unfocusedColor
+
+                property color displayColor: requestedColor
+                property bool colorAnimationReady: false
+
+                onRequestedColorChanged: Qt.callLater(() => delegateRoot.displayColor = delegateRoot.requestedColor)
+
                 Item {
                     id: dragHandler
                     anchors.fill: parent
@@ -1523,7 +1530,7 @@ Item {
                     x: root.isVertical ? (root.widgetHeight - width) / 2 : (parent.width - width) / 2
                     y: root.isVertical ? (parent.height - height) / 2 : (root.widgetHeight - height) / 2
                     radius: Theme.cornerRadius
-                    color: isActive ? activeColor : isUrgent ? urgentColor : isPlaceholder ? Theme.surfaceTextLight : isHovered ? Theme.withAlpha(unfocusedColor, 0.7) : isOccupied ? occupiedColor : unfocusedColor
+                    color: delegateRoot.displayColor
                     opacity: dragHandler.dragging ? 0.8 : 1.0
 
                     border.width: dragHandler.dragging ? 2 : (isUrgent ? 2 : (isDropTarget ? 2 : 0))
@@ -1556,6 +1563,7 @@ Item {
                     }
 
                     Behavior on color {
+                        enabled: delegateRoot.colorAnimationReady
                         ColorAnimation {
                             duration: Theme.mediumDuration
                             easing.type: Theme.emphasizedEasing
@@ -1950,7 +1958,10 @@ Item {
                     }
                 }
 
-                Component.onCompleted: updateAllData()
+                Component.onCompleted: {
+                    updateAllData();
+                    delegateRoot.colorAnimationReady = true;
+                }
 
                 Connections {
                     target: CompositorService
