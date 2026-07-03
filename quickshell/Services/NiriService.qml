@@ -1164,7 +1164,9 @@ Singleton {
         const defaultBorderSize = 2;
 
         const cornerRadius = (typeof SettingsData !== "undefined" && SettingsData.niriLayoutRadiusOverride >= 0) ? SettingsData.niriLayoutRadiusOverride : defaultRadius;
-        const gaps = (typeof SettingsData !== "undefined" && SettingsData.niriLayoutGapsOverride >= 0) ? SettingsData.niriLayoutGapsOverride : defaultGaps;
+        const gapsOverride = typeof SettingsData !== "undefined" ? SettingsData.niriLayoutGapsOverride : -1;
+        const manageGaps = gapsOverride !== -2;
+        const gaps = gapsOverride >= 0 ? gapsOverride : defaultGaps;
         const borderSize = (typeof SettingsData !== "undefined" && SettingsData.niriLayoutBorderSize >= 0) ? SettingsData.niriLayoutBorderSize : defaultBorderSize;
         const frameEnabled = typeof SettingsData !== "undefined" && SettingsData.frameEnabled;
         const frameConnectedMode = frameEnabled && SettingsData.frameMode === "connected";
@@ -1206,16 +1208,13 @@ layer-rule {
 
 `;
 
+        const layoutLines = [];
+        if (manageGaps)
+            layoutLines.push(`    gaps ${gaps}`, "");
+        layoutLines.push("    border {", `        width ${borderSize}`, "    }", "", "    focus-ring {", `        width ${borderSize}`, "    }");
+
         const configContent = dmsWarning + `layout {
-    gaps ${gaps}
-
-    border {
-        width ${borderSize}
-    }
-
-    focus-ring {
-        width ${borderSize}
-    }
+${layoutLines.join("\n")}
 }
 
 window-rule {

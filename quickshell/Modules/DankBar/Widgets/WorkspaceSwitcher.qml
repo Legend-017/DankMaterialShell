@@ -205,6 +205,21 @@ Item {
         return focusedWs ? focusedWs.num : 1;
     }
 
+    // Numbered workspaces first in id order, named (negative id) after, by name
+    function hyprlandWorkspaceOrder(a, b) {
+        const keyA = a.id < 0 ? Number.MAX_SAFE_INTEGER : a.id;
+        const keyB = b.id < 0 ? Number.MAX_SAFE_INTEGER : b.id;
+        if (keyA !== keyB)
+            return keyA - keyB;
+        return (a.name ?? "").localeCompare(b.name ?? "");
+    }
+
+    function hyprlandWorkspaceSelector(ws) {
+        if (!ws)
+            return 1;
+        return ws.id > 0 ? ws.id : "name:" + (ws.name ?? "");
+    }
+
     function getHyprlandWorkspaces() {
         const workspaces = Hyprland.workspaces?.values || [];
         if (workspaces.length === 0) {
@@ -216,7 +231,14 @@ Item {
             ];
         }
 
-        let filtered = workspaces.filter(ws => ws.id > -1);
+        // Hyprland gives named workspaces negative ids (from -1337 down); special
+        // workspaces always store a "special:" name prefix ("special" pre-colon era)
+        let filtered = workspaces.filter(ws => {
+            if (ws.id > 0)
+                return true;
+            const name = ws.name ?? "";
+            return name !== "special" && !name.startsWith("special:");
+        });
         if (filtered.length === 0) {
             return [
                 {
@@ -227,10 +249,10 @@ Item {
         }
 
         if (!root.screenName || SettingsData.workspaceFollowFocus) {
-            filtered = filtered.slice().sort((a, b) => a.id - b.id);
+            filtered = filtered.slice().sort(hyprlandWorkspaceOrder);
         } else {
             const monitorWorkspaces = filtered.filter(ws => ws.monitor?.name === root.screenName);
-            filtered = monitorWorkspaces.length > 0 ? monitorWorkspaces.sort((a, b) => a.id - b.id) : [
+            filtered = monitorWorkspaces.length > 0 ? monitorWorkspaces.sort(hyprlandWorkspaceOrder) : [
                 {
                     id: 1,
                     name: "1"
@@ -586,7 +608,7 @@ Item {
             break;
         case "hyprland":
             if (data.id) {
-                HyprlandService.focusWorkspace(data.id);
+                HyprlandService.focusWorkspace(hyprlandWorkspaceSelector(data));
             }
             break;
         case "mango":
@@ -676,7 +698,7 @@ Item {
                 return;
             }
 
-            HyprlandService.focusWorkspace(realWorkspaces[nextIndex].id);
+            HyprlandService.focusWorkspace(hyprlandWorkspaceSelector(realWorkspaces[nextIndex]));
         } else if (root.isMango) {
             const realWorkspaces = getRealWorkspaces();
             if (realWorkspaces.length < 2) {
@@ -718,7 +740,7 @@ Item {
         if (CompositorService.isNiri)
             return (modelData?.idx !== undefined && modelData?.idx !== -1) ? modelData.idx : "";
         if (CompositorService.isHyprland)
-            return modelData?.id || "";
+            return modelData?.id > 0 ? modelData.id : (modelData?.name ?? "");
         if (root.isMango)
             return (modelData?.tag !== undefined) ? (modelData.tag + 1) : "";
         if (CompositorService.isSway || CompositorService.isScroll || CompositorService.isMiracle)
@@ -1362,7 +1384,7 @@ Item {
                                     NiriService.switchToWorkspace(modelData.id);
                                 }
                             } else if (CompositorService.isHyprland && modelData?.id) {
-                                HyprlandService.focusWorkspace(modelData.id);
+                                HyprlandService.focusWorkspace(root.hyprlandWorkspaceSelector(modelData));
                             } else if (root.isMango && modelData?.tag !== undefined) {
                                 MangoService.switchToTag(root.screenName, modelData.tag);
                             } else if ((CompositorService.isSway || CompositorService.isScroll || CompositorService.isMiracle) && modelData?.num) {

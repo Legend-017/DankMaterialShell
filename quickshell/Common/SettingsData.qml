@@ -177,10 +177,12 @@ Singleton {
     property int niriLayoutRadiusOverride: -1
     property int niriLayoutBorderSize: -1
     property int hyprlandLayoutGapsOverride: -1
+    property int hyprlandLayoutGapsOutOverride: -1
     property int hyprlandLayoutRadiusOverride: -1
     property int hyprlandLayoutBorderSize: -1
     property bool hyprlandResizeOnBorder: false
     property int mangoLayoutGapsOverride: -1
+    property int mangoLayoutGapsOutOverride: -1
     property int mangoLayoutRadiusOverride: -1
     property int mangoLayoutBorderSize: -1
     property bool mangoTrackpadNaturalScrolling: true
