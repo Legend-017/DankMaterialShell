@@ -7700,6 +7700,13 @@
     "comment": ""
   },
   {
+    "term": "Fill Mode",
+    "translation": "",
+    "context": "wallpaper fill mode setting",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Filter",
     "translation": "",
     "context": "plugin browser category filter label",
@@ -9227,6 +9234,13 @@
   },
   {
     "term": "How the background image is scaled",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "How the wallpaper is scaled to fit the screen",
     "translation": "",
     "context": "",
     "reference": "",
@@ -18690,14 +18704,14 @@
     "comment": ""
   },
   {
-    "term": "Tile H",
+    "term": "Tile Horizontally",
     "translation": "",
     "context": "wallpaper fill mode",
     "reference": "",
     "comment": ""
   },
   {
-    "term": "Tile V",
+    "term": "Tile Vertically",
     "translation": "",
     "context": "wallpaper fill mode",
     "reference": "",

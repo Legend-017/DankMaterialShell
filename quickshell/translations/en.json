@@ -236,7 +236,7 @@
   {
     "term": "(Default)",
     "context": "(Default)",
-    "reference": "Modules/Settings/WallpaperTab.qml:951, Modules/Settings/WallpaperTab.qml:966, Modules/Settings/WallpaperTab.qml:973",
+    "reference": "Modules/Settings/WallpaperTab.qml:879, Modules/Settings/WallpaperTab.qml:894, Modules/Settings/WallpaperTab.qml:901",
     "comment": "default monitor label suffix"
   },
   {
@@ -278,13 +278,13 @@
   {
     "term": "1 hour",
     "context": "1 hour",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:10, Modules/ControlCenter/Details/DoNotDisturbDetail.qml:71",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:10, Modules/ControlCenter/Details/DoNotDisturbDetail.qml:71",
     "comment": "wallpaper interval"
   },
   {
     "term": "1 hour 30 minutes",
     "context": "1 hour 30 minutes",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:10",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:10",
     "comment": "wallpaper interval"
   },
   {
@@ -296,7 +296,7 @@
   {
     "term": "1 minute",
     "context": "1 minute",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:10, Modules/Settings/NotificationsTab.qml:65, Modules/Notifications/Center/NotificationSettings.qml:71",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:10, Modules/Settings/NotificationsTab.qml:65, Modules/Notifications/Center/NotificationSettings.qml:71",
     "comment": "wallpaper interval"
   },
   {
@@ -332,7 +332,7 @@
   {
     "term": "10 seconds",
     "context": "10 seconds",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:103, Modules/Settings/PowerSleepTab.qml:129, Modules/Settings/PowerSleepTab.qml:512, Modules/Settings/NotificationsTab.qml:53, Modules/Notifications/Center/NotificationSettings.qml:59",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:103, Modules/Settings/PowerSleepTab.qml:129, Modules/Settings/PowerSleepTab.qml:512, Modules/Settings/NotificationsTab.qml:53, Modules/Notifications/Center/NotificationSettings.qml:59",
     "comment": "wallpaper interval"
   },
   {
@@ -344,7 +344,7 @@
   {
     "term": "12 hours",
     "context": "12 hours",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016",
     "comment": "wallpaper interval"
   },
   {
@@ -368,13 +368,13 @@
   {
     "term": "15 minutes",
     "context": "15 minutes",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:10",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:10",
     "comment": "wallpaper interval"
   },
   {
     "term": "15 seconds",
     "context": "15 seconds",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:10, Modules/Settings/PowerSleepTab.qml:103, Modules/Settings/PowerSleepTab.qml:129, Modules/Settings/NotificationsTab.qml:57, Modules/Notifications/Center/NotificationSettings.qml:63",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:10, Modules/Settings/PowerSleepTab.qml:103, Modules/Settings/PowerSleepTab.qml:129, Modules/Settings/NotificationsTab.qml:57, Modules/Notifications/Center/NotificationSettings.qml:63",
     "comment": "wallpaper interval"
   },
   {
@@ -386,7 +386,7 @@
   {
     "term": "2 hours",
     "context": "2 hours",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:10",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:10",
     "comment": "wallpaper interval"
   },
   {
@@ -410,13 +410,13 @@
   {
     "term": "20 seconds",
     "context": "20 seconds",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:103, Modules/Settings/PowerSleepTab.qml:129",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:103, Modules/Settings/PowerSleepTab.qml:129",
     "comment": "wallpaper interval"
   },
   {
     "term": "24-Hour Format",
     "context": "24-Hour Format",
-    "reference": "Modules/Settings/WallpaperTab.qml:1226, Modules/Settings/TimeWeatherTab.qml:53",
+    "reference": "Modules/Settings/WallpaperTab.qml:1154, Modules/Settings/TimeWeatherTab.qml:53",
     "comment": ""
   },
   {
@@ -428,7 +428,7 @@
   {
     "term": "25 seconds",
     "context": "25 seconds",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016",
     "comment": "wallpaper interval"
   },
   {
@@ -452,7 +452,7 @@
   {
     "term": "3 hours",
     "context": "3 hours",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:10, Modules/ControlCenter/Details/DoNotDisturbDetail.qml:75",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:10, Modules/ControlCenter/Details/DoNotDisturbDetail.qml:75",
     "comment": "wallpaper interval"
   },
   {
@@ -488,19 +488,19 @@
   {
     "term": "30 minutes",
     "context": "30 minutes",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:10",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:10",
     "comment": "wallpaper interval"
   },
   {
     "term": "30 seconds",
     "context": "30 seconds",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:10, Modules/Settings/PowerSleepTab.qml:103, Modules/Settings/PowerSleepTab.qml:129, Modules/Settings/NotificationsTab.qml:61, Modules/Notifications/Center/NotificationSettings.qml:67",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:10, Modules/Settings/PowerSleepTab.qml:103, Modules/Settings/PowerSleepTab.qml:129, Modules/Settings/NotificationsTab.qml:61, Modules/Notifications/Center/NotificationSettings.qml:67",
     "comment": "wallpaper interval"
   },
   {
     "term": "35 seconds",
     "context": "35 seconds",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016",
     "comment": "wallpaper interval"
   },
   {
@@ -512,7 +512,7 @@
   {
     "term": "4 hours",
     "context": "4 hours",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016",
     "comment": "wallpaper interval"
   },
   {
@@ -524,13 +524,13 @@
   {
     "term": "40 seconds",
     "context": "40 seconds",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016",
     "comment": "wallpaper interval"
   },
   {
     "term": "45 seconds",
     "context": "45 seconds",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016",
     "comment": "wallpaper interval"
   },
   {
@@ -542,19 +542,19 @@
   {
     "term": "5 minutes",
     "context": "5 minutes",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/WallpaperTab.qml:1112, Modules/Settings/WallpaperTab.qml:1136, Modules/Settings/PowerSleepTab.qml:10, Modules/Settings/NotificationsTab.qml:73, Modules/Notifications/Center/NotificationSettings.qml:79",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/WallpaperTab.qml:1040, Modules/Settings/WallpaperTab.qml:1064, Modules/Settings/PowerSleepTab.qml:10, Modules/Settings/NotificationsTab.qml:73, Modules/Notifications/Center/NotificationSettings.qml:79",
     "comment": "wallpaper interval"
   },
   {
     "term": "5 seconds",
     "context": "5 seconds",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/Settings/PowerSleepTab.qml:103, Modules/Settings/PowerSleepTab.qml:114, Modules/Settings/PowerSleepTab.qml:129, Modules/Settings/PowerSleepTab.qml:140, Modules/Settings/PowerSleepTab.qml:512, Modules/Settings/NotificationsTab.qml:45, Modules/Settings/NotificationsTab.qml:160, Modules/Notifications/Center/NotificationSettings.qml:51, Modules/Notifications/Center/NotificationSettings.qml:90",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/Settings/PowerSleepTab.qml:103, Modules/Settings/PowerSleepTab.qml:114, Modules/Settings/PowerSleepTab.qml:129, Modules/Settings/PowerSleepTab.qml:140, Modules/Settings/PowerSleepTab.qml:512, Modules/Settings/NotificationsTab.qml:45, Modules/Settings/NotificationsTab.qml:160, Modules/Notifications/Center/NotificationSettings.qml:51, Modules/Notifications/Center/NotificationSettings.qml:90",
     "comment": "wallpaper interval"
   },
   {
     "term": "50 seconds",
     "context": "50 seconds",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016",
     "comment": "wallpaper interval"
   },
   {
@@ -566,13 +566,13 @@
   {
     "term": "55 seconds",
     "context": "55 seconds",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016",
     "comment": "wallpaper interval"
   },
   {
     "term": "6 hours",
     "context": "6 hours",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016",
     "comment": "wallpaper interval"
   },
   {
@@ -590,7 +590,7 @@
   {
     "term": "8 hours",
     "context": "8 hours",
-    "reference": "Modules/Settings/WallpaperTab.qml:1088, Modules/ControlCenter/Details/DoNotDisturbDetail.qml:79",
+    "reference": "Modules/Settings/WallpaperTab.qml:1016, Modules/ControlCenter/Details/DoNotDisturbDetail.qml:79",
     "comment": "wallpaper interval"
   },
   {
@@ -1820,7 +1820,7 @@
   {
     "term": "Automatic Cycling",
     "context": "Automatic Cycling",
-    "reference": "Modules/Settings/WallpaperTab.qml:999, Modules/Settings/LockScreenTab.qml:387",
+    "reference": "Modules/Settings/WallpaperTab.qml:927, Modules/Settings/LockScreenTab.qml:387",
     "comment": ""
   },
   {
@@ -1832,7 +1832,7 @@
   {
     "term": "Automatically cycle through wallpapers in the same folder",
     "context": "Automatically cycle through wallpapers in the same folder",
-    "reference": "Modules/Settings/WallpaperTab.qml:1000",
+    "reference": "Modules/Settings/WallpaperTab.qml:928",
     "comment": ""
   },
   {
@@ -2000,7 +2000,7 @@
   {
     "term": "Background Color",
     "context": "Background Color",
-    "reference": "Modules/Settings/WallpaperTab.qml:416, Modules/Settings/WallpaperTab.qml:444",
+    "reference": "Modules/Settings/WallpaperTab.qml:344, Modules/Settings/WallpaperTab.qml:372",
     "comment": ""
   },
   {
@@ -2234,7 +2234,7 @@
   {
     "term": "Black",
     "context": "Black",
-    "reference": "Modules/Settings/TypographyMotionTab.qml:254, Modules/Settings/TypographyMotionTab.qml:274, Modules/Settings/TypographyMotionTab.qml:306, Modules/Settings/WallpaperTab.qml:423",
+    "reference": "Modules/Settings/TypographyMotionTab.qml:254, Modules/Settings/TypographyMotionTab.qml:274, Modules/Settings/TypographyMotionTab.qml:306, Modules/Settings/WallpaperTab.qml:351",
     "comment": "font weight"
   },
   {
@@ -2300,13 +2300,13 @@
   {
     "term": "Blur Wallpaper Layer",
     "context": "Blur Wallpaper Layer",
-    "reference": "Modules/Settings/WallpaperTab.qml:1364",
+    "reference": "Modules/Settings/WallpaperTab.qml:1292",
     "comment": ""
   },
   {
     "term": "Blur on Overview",
     "context": "Blur on Overview",
-    "reference": "Modules/Settings/WallpaperTab.qml:874",
+    "reference": "Modules/Settings/WallpaperTab.qml:802",
     "comment": ""
   },
   {
@@ -2318,7 +2318,7 @@
   {
     "term": "Blur wallpaper when niri overview is open",
     "context": "Blur wallpaper when niri overview is open",
-    "reference": "Modules/Settings/WallpaperTab.qml:875",
+    "reference": "Modules/Settings/WallpaperTab.qml:803",
     "comment": ""
   },
   {
@@ -2828,7 +2828,7 @@
   {
     "term": "Choose Dark Mode Color",
     "context": "Choose Dark Mode Color",
-    "reference": "Modules/Settings/WallpaperTab.qml:798",
+    "reference": "Modules/Settings/WallpaperTab.qml:726",
     "comment": "dark mode wallpaper color picker title"
   },
   {
@@ -2846,7 +2846,7 @@
   {
     "term": "Choose Light Mode Color",
     "context": "Choose Light Mode Color",
-    "reference": "Modules/Settings/WallpaperTab.qml:608",
+    "reference": "Modules/Settings/WallpaperTab.qml:536",
     "comment": "light mode wallpaper color picker title"
   },
   {
@@ -3254,7 +3254,7 @@
   {
     "term": "Color shown for areas not covered by wallpaper",
     "context": "Color shown for areas not covered by wallpaper",
-    "reference": "Modules/Settings/WallpaperTab.qml:417",
+    "reference": "Modules/Settings/WallpaperTab.qml:345",
     "comment": ""
   },
   {
@@ -4112,7 +4112,7 @@
   {
     "term": "Custom",
     "context": "Custom",
-    "reference": "Widgets/KeybindItem.qml:1441, dms-plugins/DankDesktopWeather/DankDesktopWeatherSettings.qml:47, dms-plugins/dms-plugins-official/DankDesktopWeather/DankDesktopWeatherSettings.qml:47, Modules/Settings/ThemeColorsTab.qml:62, Modules/Settings/ThemeColorsTab.qml:406, Modules/Settings/ThemeColorsTab.qml:406, Modules/Settings/ThemeColorsTab.qml:1779, Modules/Settings/ThemeColorsTab.qml:1785, Modules/Settings/ThemeColorsTab.qml:1796, Modules/Settings/ThemeColorsTab.qml:1808, Modules/Settings/ThemeColorsTab.qml:1973, Modules/Settings/ThemeColorsTab.qml:1979, Modules/Settings/ThemeColorsTab.qml:1990, Modules/Settings/ThemeColorsTab.qml:2001, Modules/Settings/TypographyMotionTab.qml:495, Modules/Settings/TypographyMotionTab.qml:592, Modules/Settings/TypographyMotionTab.qml:676, Modules/Settings/DockTab.qml:296, Modules/Settings/DockTab.qml:403, Modules/Settings/WallpaperTab.qml:439, Modules/Settings/LauncherTab.qml:319, Modules/Settings/LauncherTab.qml:428, Modules/Settings/DankBarTab.qml:1775, Modules/Settings/WorkspaceAppearanceCard.qml:52, Modules/Settings/WorkspaceAppearanceCard.qml:90, Modules/Settings/WorkspaceAppearanceCard.qml:122, Modules/Settings/WorkspaceAppearanceCard.qml:157, Modules/Settings/WorkspaceAppearanceCard.qml:183, Modules/Settings/FrameTab.qml:231, Modules/Settings/NotificationsTab.qml:382, Modules/Settings/CompositorLayoutTab.qml:283, Modules/Settings/CompositorLayoutTab.qml:412, Modules/Settings/CompositorLayoutTab.qml:564, Modules/Settings/Widgets/SettingsColorPicker.qml:52, Modules/Settings/Widgets/DeviceAliasRow.qml:92",
+    "reference": "Widgets/KeybindItem.qml:1441, dms-plugins/DankDesktopWeather/DankDesktopWeatherSettings.qml:47, dms-plugins/dms-plugins-official/DankDesktopWeather/DankDesktopWeatherSettings.qml:47, Modules/Settings/ThemeColorsTab.qml:62, Modules/Settings/ThemeColorsTab.qml:406, Modules/Settings/ThemeColorsTab.qml:406, Modules/Settings/ThemeColorsTab.qml:1779, Modules/Settings/ThemeColorsTab.qml:1785, Modules/Settings/ThemeColorsTab.qml:1796, Modules/Settings/ThemeColorsTab.qml:1808, Modules/Settings/ThemeColorsTab.qml:1973, Modules/Settings/ThemeColorsTab.qml:1979, Modules/Settings/ThemeColorsTab.qml:1990, Modules/Settings/ThemeColorsTab.qml:2001, Modules/Settings/TypographyMotionTab.qml:495, Modules/Settings/TypographyMotionTab.qml:592, Modules/Settings/TypographyMotionTab.qml:676, Modules/Settings/DockTab.qml:296, Modules/Settings/DockTab.qml:403, Modules/Settings/WallpaperTab.qml:367, Modules/Settings/LauncherTab.qml:319, Modules/Settings/LauncherTab.qml:428, Modules/Settings/DankBarTab.qml:1775, Modules/Settings/WorkspaceAppearanceCard.qml:52, Modules/Settings/WorkspaceAppearanceCard.qml:90, Modules/Settings/WorkspaceAppearanceCard.qml:122, Modules/Settings/WorkspaceAppearanceCard.qml:157, Modules/Settings/WorkspaceAppearanceCard.qml:183, Modules/Settings/FrameTab.qml:231, Modules/Settings/NotificationsTab.qml:382, Modules/Settings/CompositorLayoutTab.qml:283, Modules/Settings/CompositorLayoutTab.qml:412, Modules/Settings/CompositorLayoutTab.qml:564, Modules/Settings/Widgets/SettingsColorPicker.qml:52, Modules/Settings/Widgets/DeviceAliasRow.qml:92",
     "comment": "shadow color option | surface border color | theme category option | widget background color option | workspace color option"
   },
   {
@@ -4340,7 +4340,7 @@
   {
     "term": "Daily at:",
     "context": "Daily at:",
-    "reference": "Modules/Settings/WallpaperTab.qml:1153",
+    "reference": "Modules/Settings/WallpaperTab.qml:1081",
     "comment": ""
   },
   {
@@ -4406,7 +4406,7 @@
   {
     "term": "Dark Mode",
     "context": "Dark Mode",
-    "reference": "Modules/Settings/ThemeColorsTab.qml:1533, Modules/Settings/WallpaperTab.qml:674, Modules/ControlCenter/Models/WidgetModel.qml:137, Modules/ControlCenter/Components/DragDropGrid.qml:749",
+    "reference": "Modules/Settings/ThemeColorsTab.qml:1533, Modules/Settings/WallpaperTab.qml:602, Modules/ControlCenter/Models/WidgetModel.qml:137, Modules/ControlCenter/Components/DragDropGrid.qml:749",
     "comment": ""
   },
   {
@@ -4832,7 +4832,7 @@
   {
     "term": "Disable Built-in Wallpapers",
     "context": "Disable Built-in Wallpapers",
-    "reference": "Modules/Settings/WallpaperTab.qml:1342",
+    "reference": "Modules/Settings/WallpaperTab.qml:1270",
     "comment": "wallpaper settings disable toggle"
   },
   {
@@ -4874,7 +4874,7 @@
   {
     "term": "Disc",
     "context": "Disc",
-    "reference": "Modules/Settings/WallpaperTab.qml:1259",
+    "reference": "Modules/Settings/WallpaperTab.qml:1187",
     "comment": "wallpaper transition option"
   },
   {
@@ -5264,7 +5264,7 @@
   {
     "term": "Duplicate Wallpaper with Blur",
     "context": "Duplicate Wallpaper with Blur",
-    "reference": "Modules/Settings/WallpaperTab.qml:1373",
+    "reference": "Modules/Settings/WallpaperTab.qml:1301",
     "comment": ""
   },
   {
@@ -5522,7 +5522,7 @@
   {
     "term": "Enable compositor-targetable blur layer (namespace: dms:blurwallpaper). Requires manual niri configuration.",
     "context": "Enable compositor-targetable blur layer (namespace: dms:blurwallpaper). Requires manual niri configuration.",
-    "reference": "Modules/Settings/WallpaperTab.qml:1374",
+    "reference": "Modules/Settings/WallpaperTab.qml:1302",
     "comment": ""
   },
   {
@@ -5924,7 +5924,7 @@
   {
     "term": "External Wallpaper Management",
     "context": "External Wallpaper Management",
-    "reference": "Modules/Settings/WallpaperTab.qml:1334",
+    "reference": "Modules/Settings/WallpaperTab.qml:1262",
     "comment": "wallpaper settings external management"
   },
   {
@@ -5954,7 +5954,7 @@
   {
     "term": "Fade",
     "context": "Fade",
-    "reference": "Modules/Settings/WallpaperTab.qml:1255",
+    "reference": "Modules/Settings/WallpaperTab.qml:1183",
     "comment": "wallpaper transition option"
   },
   {
@@ -6596,8 +6596,14 @@
   {
     "term": "Fill",
     "context": "Fill",
-    "reference": "Modules/Settings/WallpaperTab.qml:332, Modules/Settings/Widgets/SettingsWallpaperPicker.qml:72",
+    "reference": "Modules/Settings/WallpaperTab.qml:307, Modules/Settings/Widgets/SettingsWallpaperPicker.qml:72",
     "comment": "wallpaper fill mode"
+  },
+  {
+    "term": "Fill Mode",
+    "context": "Fill Mode",
+    "reference": "Modules/Settings/WallpaperTab.qml:312",
+    "comment": "wallpaper fill mode setting"
   },
   {
     "term": "Filter",
@@ -6680,7 +6686,7 @@
   {
     "term": "Fit",
     "context": "Fit",
-    "reference": "Modules/Settings/WallpaperTab.qml:332",
+    "reference": "Modules/Settings/WallpaperTab.qml:307",
     "comment": "wallpaper fill mode"
   },
   {
@@ -7904,13 +7910,19 @@
   {
     "term": "How often to change wallpaper",
     "context": "How often to change wallpaper",
-    "reference": "Modules/Settings/WallpaperTab.qml:1102",
+    "reference": "Modules/Settings/WallpaperTab.qml:1030",
     "comment": ""
   },
   {
     "term": "How the background image is scaled",
     "context": "How the background image is scaled",
     "reference": "Modules/Settings/Widgets/SettingsWallpaperPicker.qml:67",
+    "comment": ""
+  },
+  {
+    "term": "How the wallpaper is scaled to fit the screen",
+    "context": "How the wallpaper is scaled to fit the screen",
+    "reference": "Modules/Settings/WallpaperTab.qml:313",
     "comment": ""
   },
   {
@@ -8150,7 +8162,7 @@
   {
     "term": "Include Transitions",
     "context": "Include Transitions",
-    "reference": "Modules/Settings/WallpaperTab.qml:1293",
+    "reference": "Modules/Settings/WallpaperTab.qml:1221",
     "comment": ""
   },
   {
@@ -8426,7 +8438,7 @@
   {
     "term": "Interval",
     "context": "Interval",
-    "reference": "Modules/Settings/WallpaperTab.qml:1048, Modules/Settings/WallpaperTab.qml:1101",
+    "reference": "Modules/Settings/WallpaperTab.qml:976, Modules/Settings/WallpaperTab.qml:1029",
     "comment": "wallpaper cycling mode tab"
   },
   {
@@ -8468,7 +8480,7 @@
   {
     "term": "Iris Bloom",
     "context": "Iris Bloom",
-    "reference": "Modules/Settings/WallpaperTab.qml:1263",
+    "reference": "Modules/Settings/WallpaperTab.qml:1191",
     "comment": "wallpaper transition option"
   },
   {
@@ -8804,7 +8816,7 @@
   {
     "term": "Light Mode",
     "context": "Light Mode",
-    "reference": "Modules/Settings/ThemeColorsTab.qml:1533, Modules/Settings/ThemeColorsTab.qml:1603, Modules/Settings/WallpaperTab.qml:484",
+    "reference": "Modules/Settings/ThemeColorsTab.qml:1533, Modules/Settings/ThemeColorsTab.qml:1603, Modules/Settings/WallpaperTab.qml:412",
     "comment": ""
   },
   {
@@ -9362,7 +9374,7 @@
   {
     "term": "Matugen Target Monitor",
     "context": "Matugen Target Monitor",
-    "reference": "Modules/Settings/WallpaperTab.qml:946",
+    "reference": "Modules/Settings/WallpaperTab.qml:874",
     "comment": ""
   },
   {
@@ -9734,7 +9746,7 @@
   {
     "term": "Mode:",
     "context": "Mode:",
-    "reference": "Modules/Settings/WallpaperTab.qml:1032",
+    "reference": "Modules/Settings/WallpaperTab.qml:960",
     "comment": ""
   },
   {
@@ -9776,7 +9788,7 @@
   {
     "term": "Monitor whose wallpaper drives dynamic theming colors",
     "context": "Monitor whose wallpaper drives dynamic theming colors",
-    "reference": "Modules/Settings/WallpaperTab.qml:947",
+    "reference": "Modules/Settings/WallpaperTab.qml:875",
     "comment": ""
   },
   {
@@ -10586,7 +10598,7 @@
   {
     "term": "No monitors",
     "context": "No monitors",
-    "reference": "Modules/Settings/WallpaperTab.qml:920, Modules/Settings/WallpaperTab.qml:951",
+    "reference": "Modules/Settings/WallpaperTab.qml:848, Modules/Settings/WallpaperTab.qml:879",
     "comment": "no monitors available label"
   },
   {
@@ -10826,7 +10838,7 @@
   {
     "term": "None",
     "context": "None",
-    "reference": "Modals/WindowRuleModal.qml:1156, Services/CupsService.qml:786, Modules/Settings/TypographyMotionTab.qml:495, Modules/Settings/TypographyMotionTab.qml:592, Modules/Settings/TypographyMotionTab.qml:676, Modules/Settings/WallpaperTab.qml:1253, Modules/Settings/DesktopWidgetInstanceCard.qml:258, Modules/Settings/DesktopWidgetInstanceCard.qml:274, Modules/Settings/DankBarTab.qml:1329, Modules/Settings/DankBarTab.qml:1857, Modules/Settings/DankBarTab.qml:1857, Modules/Settings/DankBarTab.qml:1898, Modules/Settings/WorkspaceAppearanceCard.qml:49, Modules/Settings/WorkspaceAppearanceCard.qml:57, Modules/Settings/NotificationsTab.qml:382, Modules/Settings/WindowRulesTab.qml:1061, Modules/Settings/DisplayConfig/HyprlandOutputSettings.qml:94, Modules/Settings/DisplayConfig/HyprlandOutputSettings.qml:107, Modules/Settings/DisplayConfig/HyprlandOutputSettings.qml:111, Modules/ControlCenter/BuiltinPlugins/TailscaleWidget.qml:181",
+    "reference": "Modals/WindowRuleModal.qml:1156, Services/CupsService.qml:786, Modules/Settings/TypographyMotionTab.qml:495, Modules/Settings/TypographyMotionTab.qml:592, Modules/Settings/TypographyMotionTab.qml:676, Modules/Settings/WallpaperTab.qml:1181, Modules/Settings/DesktopWidgetInstanceCard.qml:258, Modules/Settings/DesktopWidgetInstanceCard.qml:274, Modules/Settings/DankBarTab.qml:1329, Modules/Settings/DankBarTab.qml:1857, Modules/Settings/DankBarTab.qml:1857, Modules/Settings/DankBarTab.qml:1898, Modules/Settings/WorkspaceAppearanceCard.qml:49, Modules/Settings/WorkspaceAppearanceCard.qml:57, Modules/Settings/NotificationsTab.qml:382, Modules/Settings/WindowRulesTab.qml:1061, Modules/Settings/DisplayConfig/HyprlandOutputSettings.qml:94, Modules/Settings/DisplayConfig/HyprlandOutputSettings.qml:107, Modules/Settings/DisplayConfig/HyprlandOutputSettings.qml:111, Modules/ControlCenter/BuiltinPlugins/TailscaleWidget.qml:181",
     "comment": "Tailscale exit node: none selected | wallpaper transition option | workspace color option"
   },
   {
@@ -10916,7 +10928,7 @@
   {
     "term": "Not set",
     "context": "Not set",
-    "reference": "Modules/Settings/WallpaperTab.qml:659, Modules/Settings/WallpaperTab.qml:849",
+    "reference": "Modules/Settings/WallpaperTab.qml:587, Modules/Settings/WallpaperTab.qml:777",
     "comment": "wallpaper not set label"
   },
   {
@@ -11564,7 +11576,7 @@
   {
     "term": "Pad",
     "context": "Pad",
-    "reference": "Modules/Settings/WallpaperTab.qml:356",
+    "reference": "Modules/Settings/WallpaperTab.qml:307",
     "comment": "wallpaper fill mode"
   },
   {
@@ -11750,13 +11762,13 @@
   {
     "term": "Per-Mode Wallpapers",
     "context": "Per-Mode Wallpapers",
-    "reference": "Modules/Settings/WallpaperTab.qml:462",
+    "reference": "Modules/Settings/WallpaperTab.qml:390",
     "comment": ""
   },
   {
     "term": "Per-Monitor Wallpapers",
     "context": "Per-Monitor Wallpapers",
-    "reference": "Modules/Settings/WallpaperTab.qml:893",
+    "reference": "Modules/Settings/WallpaperTab.qml:821",
     "comment": ""
   },
   {
@@ -11876,7 +11888,7 @@
   {
     "term": "Pixelate",
     "context": "Pixelate",
-    "reference": "Modules/Settings/WallpaperTab.qml:1265",
+    "reference": "Modules/Settings/WallpaperTab.qml:1193",
     "comment": "wallpaper transition option"
   },
   {
@@ -12134,7 +12146,7 @@
   {
     "term": "Portal",
     "context": "Portal",
-    "reference": "Modules/Settings/WallpaperTab.qml:1267",
+    "reference": "Modules/Settings/WallpaperTab.qml:1195",
     "comment": "wallpaper transition option"
   },
   {
@@ -12368,7 +12380,7 @@
   {
     "term": "Primary",
     "context": "Primary",
-    "reference": "dms-plugins/DankDesktopWeather/DankDesktopWeatherSettings.qml:39, dms-plugins/dms-plugins-official/DankDesktopWeather/DankDesktopWeatherSettings.qml:39, Modules/Settings/ThemeColorsTab.qml:1679, Modules/Settings/ThemeColorsTab.qml:1681, Modules/Settings/ThemeColorsTab.qml:1695, Modules/Settings/ThemeColorsTab.qml:1717, Modules/Settings/ThemeColorsTab.qml:1719, Modules/Settings/ThemeColorsTab.qml:1733, Modules/Settings/ThemeColorsTab.qml:1779, Modules/Settings/ThemeColorsTab.qml:1782, Modules/Settings/ThemeColorsTab.qml:1790, Modules/Settings/ThemeColorsTab.qml:1802, Modules/Settings/ThemeColorsTab.qml:1973, Modules/Settings/ThemeColorsTab.qml:1977, Modules/Settings/ThemeColorsTab.qml:1986, Modules/Settings/ThemeColorsTab.qml:1997, Modules/Settings/DockTab.qml:403, Modules/Settings/DockTab.qml:688, Modules/Settings/WallpaperTab.qml:431, Modules/Settings/LauncherTab.qml:428, Modules/Settings/LauncherTab.qml:737, Modules/Settings/NetworkStatusTab.qml:131, Modules/Settings/DankBarTab.qml:1329, Modules/Settings/DankBarTab.qml:1775, Modules/Settings/WorkspaceAppearanceCard.qml:19, Modules/Settings/WorkspaceAppearanceCard.qml:60, Modules/Settings/WorkspaceAppearanceCard.qml:101, Modules/Settings/WorkspaceAppearanceCard.qml:130, Modules/Settings/WorkspaceAppearanceCard.qml:165, Modules/Settings/FrameTab.qml:231, Modules/Settings/Widgets/SettingsColorPicker.qml:42",
+    "reference": "dms-plugins/DankDesktopWeather/DankDesktopWeatherSettings.qml:39, dms-plugins/dms-plugins-official/DankDesktopWeather/DankDesktopWeatherSettings.qml:39, Modules/Settings/ThemeColorsTab.qml:1679, Modules/Settings/ThemeColorsTab.qml:1681, Modules/Settings/ThemeColorsTab.qml:1695, Modules/Settings/ThemeColorsTab.qml:1717, Modules/Settings/ThemeColorsTab.qml:1719, Modules/Settings/ThemeColorsTab.qml:1733, Modules/Settings/ThemeColorsTab.qml:1779, Modules/Settings/ThemeColorsTab.qml:1782, Modules/Settings/ThemeColorsTab.qml:1790, Modules/Settings/ThemeColorsTab.qml:1802, Modules/Settings/ThemeColorsTab.qml:1973, Modules/Settings/ThemeColorsTab.qml:1977, Modules/Settings/ThemeColorsTab.qml:1986, Modules/Settings/ThemeColorsTab.qml:1997, Modules/Settings/DockTab.qml:403, Modules/Settings/DockTab.qml:688, Modules/Settings/WallpaperTab.qml:359, Modules/Settings/LauncherTab.qml:428, Modules/Settings/LauncherTab.qml:737, Modules/Settings/NetworkStatusTab.qml:131, Modules/Settings/DankBarTab.qml:1329, Modules/Settings/DankBarTab.qml:1775, Modules/Settings/WorkspaceAppearanceCard.qml:19, Modules/Settings/WorkspaceAppearanceCard.qml:60, Modules/Settings/WorkspaceAppearanceCard.qml:101, Modules/Settings/WorkspaceAppearanceCard.qml:130, Modules/Settings/WorkspaceAppearanceCard.qml:165, Modules/Settings/FrameTab.qml:231, Modules/Settings/Widgets/SettingsColorPicker.qml:42",
     "comment": "button color option | color option | primary color | shadow color option | surface border color | tile color option | workspace color option"
   },
   {
@@ -12674,7 +12686,7 @@
   {
     "term": "Random",
     "context": "Random",
-    "reference": "Modules/Settings/WallpaperTab.qml:1251, Modules/Settings/WallpaperTab.qml:1274, Modules/Settings/WallpaperTab.qml:1277",
+    "reference": "Modules/Settings/WallpaperTab.qml:1179, Modules/Settings/WallpaperTab.qml:1202, Modules/Settings/WallpaperTab.qml:1205",
     "comment": "wallpaper transition option"
   },
   {
@@ -13574,7 +13586,7 @@
   {
     "term": "Scroll",
     "context": "Scroll",
-    "reference": "Modules/Settings/WallpaperTab.qml:332, Modules/Settings/WindowRulesTab.qml:107",
+    "reference": "Modules/Settings/WallpaperTab.qml:307, Modules/Settings/WindowRulesTab.qml:107",
     "comment": "wallpaper fill mode"
   },
   {
@@ -13832,7 +13844,7 @@
   {
     "term": "Select Wallpaper",
     "context": "Select Wallpaper",
-    "reference": "Modals/Settings/SettingsModal.qml:159, Modules/Settings/WallpaperTab.qml:1406, Modules/Settings/WallpaperTab.qml:1428, Modules/Settings/WallpaperTab.qml:1448",
+    "reference": "Modals/Settings/SettingsModal.qml:159, Modules/Settings/WallpaperTab.qml:1334, Modules/Settings/WallpaperTab.qml:1356, Modules/Settings/WallpaperTab.qml:1376",
     "comment": "dark mode wallpaper file browser title | light mode wallpaper file browser title | wallpaper file browser title"
   },
   {
@@ -13934,7 +13946,7 @@
   {
     "term": "Select monitor to configure wallpaper",
     "context": "Select monitor to configure wallpaper",
-    "reference": "Modules/Settings/WallpaperTab.qml:912",
+    "reference": "Modules/Settings/WallpaperTab.qml:840",
     "comment": ""
   },
   {
@@ -13982,7 +13994,7 @@
   {
     "term": "Select which transitions to include in randomization",
     "context": "Select which transitions to include in randomization",
-    "reference": "Modules/Settings/WallpaperTab.qml:1300",
+    "reference": "Modules/Settings/WallpaperTab.qml:1228",
     "comment": ""
   },
   {
@@ -14090,13 +14102,13 @@
   {
     "term": "Set different wallpapers for each connected monitor",
     "context": "Set different wallpapers for each connected monitor",
-    "reference": "Modules/Settings/WallpaperTab.qml:894",
+    "reference": "Modules/Settings/WallpaperTab.qml:822",
     "comment": ""
   },
   {
     "term": "Set different wallpapers for light and dark mode",
     "context": "Set different wallpapers for light and dark mode",
-    "reference": "Modules/Settings/WallpaperTab.qml:463",
+    "reference": "Modules/Settings/WallpaperTab.qml:391",
     "comment": ""
   },
   {
@@ -15272,7 +15284,7 @@
   {
     "term": "Stretch",
     "context": "Stretch",
-    "reference": "Modules/Settings/WallpaperTab.qml:332",
+    "reference": "Modules/Settings/WallpaperTab.qml:307",
     "comment": "wallpaper fill mode"
   },
   {
@@ -15296,7 +15308,7 @@
   {
     "term": "Stripes",
     "context": "Stripes",
-    "reference": "Modules/Settings/WallpaperTab.qml:1261",
+    "reference": "Modules/Settings/WallpaperTab.qml:1189",
     "comment": "wallpaper transition option"
   },
   {
@@ -15362,7 +15374,7 @@
   {
     "term": "Surface Container",
     "context": "Surface Container",
-    "reference": "Modules/Settings/ThemeColorsTab.qml:47, Modules/Settings/WallpaperTab.qml:435, Modules/Settings/WorkspaceAppearanceCard.qml:40, Modules/Settings/WorkspaceAppearanceCard.qml:81, Modules/Settings/WorkspaceAppearanceCard.qml:113, Modules/Settings/WorkspaceAppearanceCard.qml:151",
+    "reference": "Modules/Settings/ThemeColorsTab.qml:47, Modules/Settings/WallpaperTab.qml:363, Modules/Settings/WorkspaceAppearanceCard.qml:40, Modules/Settings/WorkspaceAppearanceCard.qml:81, Modules/Settings/WorkspaceAppearanceCard.qml:113, Modules/Settings/WorkspaceAppearanceCard.qml:151",
     "comment": "widget background color option | workspace color option"
   },
   {
@@ -16016,19 +16028,19 @@
   {
     "term": "Tile",
     "context": "Tile",
-    "reference": "Modals/WindowRuleModal.qml:1537, Modules/Settings/WallpaperTab.qml:356, Modules/Settings/WindowRulesTab.qml:115",
+    "reference": "Modals/WindowRuleModal.qml:1537, Modules/Settings/WallpaperTab.qml:307, Modules/Settings/WindowRulesTab.qml:115",
     "comment": "wallpaper fill mode"
   },
   {
-    "term": "Tile H",
-    "context": "Tile H",
-    "reference": "Modules/Settings/WallpaperTab.qml:356",
+    "term": "Tile Horizontally",
+    "context": "Tile Horizontally",
+    "reference": "Modules/Settings/WallpaperTab.qml:307",
     "comment": "wallpaper fill mode"
   },
   {
-    "term": "Tile V",
-    "context": "Tile V",
-    "reference": "Modules/Settings/WallpaperTab.qml:356",
+    "term": "Tile Vertically",
+    "context": "Tile Vertically",
+    "reference": "Modules/Settings/WallpaperTab.qml:307",
     "comment": "wallpaper fill mode"
   },
   {
@@ -16052,7 +16064,7 @@
   {
     "term": "Time",
     "context": "Time",
-    "reference": "Modules/Settings/ThemeColorsTab.qml:1212, Modules/Settings/GammaControlTab.qml:184, Modules/Settings/WallpaperTab.qml:1052",
+    "reference": "Modules/Settings/ThemeColorsTab.qml:1212, Modules/Settings/GammaControlTab.qml:184, Modules/Settings/WallpaperTab.qml:980",
     "comment": "theme auto mode tab | wallpaper cycling mode tab"
   },
   {
@@ -16346,7 +16358,7 @@
   {
     "term": "Transition Effect",
     "context": "Transition Effect",
-    "reference": "Modules/Settings/WallpaperTab.qml:1245",
+    "reference": "Modules/Settings/WallpaperTab.qml:1173",
     "comment": ""
   },
   {
@@ -16922,7 +16934,7 @@
   {
     "term": "Use an external wallpaper manager like swww, hyprpaper, or swaybg.",
     "context": "Use an external wallpaper manager like swww, hyprpaper, or swaybg.",
-    "reference": "Modules/Settings/WallpaperTab.qml:1343",
+    "reference": "Modules/Settings/WallpaperTab.qml:1271",
     "comment": "wallpaper settings disable description"
   },
   {
@@ -17354,7 +17366,7 @@
   {
     "term": "Visual effect used when wallpaper changes",
     "context": "Visual effect used when wallpaper changes",
-    "reference": "Modules/Settings/WallpaperTab.qml:1246",
+    "reference": "Modules/Settings/WallpaperTab.qml:1174",
     "comment": ""
   },
   {
@@ -17408,7 +17420,7 @@
   {
     "term": "Wallpaper Monitor",
     "context": "Wallpaper Monitor",
-    "reference": "Modules/Settings/WallpaperTab.qml:911",
+    "reference": "Modules/Settings/WallpaperTab.qml:839",
     "comment": ""
   },
   {
@@ -17516,7 +17528,7 @@
   {
     "term": "White",
     "context": "White",
-    "reference": "Modules/Settings/WallpaperTab.qml:427",
+    "reference": "Modules/Settings/WallpaperTab.qml:355",
     "comment": ""
   },
   {
@@ -17732,7 +17744,7 @@
   {
     "term": "Wipe",
     "context": "Wipe",
-    "reference": "Modules/Settings/WallpaperTab.qml:1257",
+    "reference": "Modules/Settings/WallpaperTab.qml:1185",
     "comment": "wallpaper transition option"
   },
   {
