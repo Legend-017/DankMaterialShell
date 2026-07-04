@@ -4580,23 +4580,6 @@
     ]
   },
   {
-    "section": "lockScreenActiveMonitor",
-    "label": "Active Lock Screen Monitor",
-    "tabIndex": 11,
-    "category": "Lock Screen",
-    "keywords": [
-      "active",
-      "display",
-      "lock",
-      "lockscreen",
-      "login",
-      "monitor",
-      "password",
-      "screen",
-      "security"
-    ]
-  },
-  {
     "section": "lockScreenVideoCycling",
     "label": "Automatic Cycling",
     "tabIndex": 11,
@@ -4747,7 +4730,6 @@
     "tabIndex": 11,
     "category": "Lock Screen",
     "keywords": [
-      "active",
       "display",
       "lock",
       "lockscreen",
