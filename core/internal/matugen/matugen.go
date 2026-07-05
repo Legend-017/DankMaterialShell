@@ -912,6 +912,18 @@ func refreshGTK(mode ColorMode) {
 	}
 }
 
+var colorSchemeEchoHook func(scheme string)
+
+func SetColorSchemeEchoHook(hook func(scheme string)) {
+	colorSchemeEchoHook = hook
+}
+
+func expectColorSchemeEcho(scheme string) {
+	if colorSchemeEchoHook != nil {
+		colorSchemeEchoHook(scheme)
+	}
+}
+
 func refreshGTK4() {
 	output, err := utils.GsettingsGet("org.gnome.desktop.interface", "color-scheme")
 	if err != nil {
@@ -926,11 +938,13 @@ func refreshGTK4() {
 		toggle = "prefer-dark"
 	}
 
+	expectColorSchemeEcho(toggle)
 	if err := utils.GsettingsSet("org.gnome.desktop.interface", "color-scheme", toggle); err != nil {
 		log.Warnf("Failed to toggle color-scheme for GTK4 refresh: %v", err)
 		return
 	}
 	time.Sleep(50 * time.Millisecond)
+	expectColorSchemeEcho(current)
 	if err := utils.GsettingsSet("org.gnome.desktop.interface", "color-scheme", current); err != nil {
 		log.Warnf("Failed to restore color-scheme for GTK4 refresh: %v", err)
 	}
