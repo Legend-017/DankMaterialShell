@@ -758,6 +758,7 @@ Singleton {
     property int batteryLowNotificationType: 0
     property int batteryCriticalNotificationType: 1
     property bool batteryAutoPowerSaver: false
+    property bool lowerDisplayRefreshRateOnBattery: false
     property bool showBatteryPercent: true
     property bool showBatteryPercentOnlyOnBattery: false
     property bool showBatteryTime: false
@@ -971,6 +972,8 @@ Singleton {
     property var hyprlandOutputSettings: ({})
     property var displayProfiles: ({})
     property var activeDisplayProfile: ({})
+    property var activeDisplayProfileModes: ({})
+    property var displayPreviousRefreshModes: ({})
     property bool displayProfileAutoSelect: false
     property bool displayShowDisconnected: false
     property bool displaySnapToEdge: true
@@ -3555,6 +3558,27 @@ Singleton {
         const updated = JSON.parse(JSON.stringify(activeDisplayProfile));
         updated[compositor] = profileId;
         activeDisplayProfile = updated;
+        saveSettings();
+    }
+
+    function setActiveDisplayProfileModes(compositor, modes) {
+        if (JSON.stringify(activeDisplayProfileModes[compositor] || {}) === JSON.stringify(modes || {}))
+            return;
+        const updated = JSON.parse(JSON.stringify(activeDisplayProfileModes));
+        updated[compositor] = modes;
+        activeDisplayProfileModes = updated;
+        saveSettings();
+    }
+
+    function setDisplayPreviousRefreshModes(compositor, modes) {
+        if (JSON.stringify(displayPreviousRefreshModes[compositor] || {}) === JSON.stringify(modes || {}))
+            return;
+        const updated = JSON.parse(JSON.stringify(displayPreviousRefreshModes));
+        if (Object.keys(modes || {}).length > 0)
+            updated[compositor] = modes;
+        else
+            delete updated[compositor];
+        displayPreviousRefreshModes = updated;
         saveSettings();
     }
 
