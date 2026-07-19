@@ -238,7 +238,8 @@
     --background-feedback-warning: {{colors.tertiary_container.default.hex}} !important;
     --notice-background-warning: {{colors.tertiary_container.default.hex}} !important;
     --notice-text-warning: {{colors.on_tertiary_container.default.hex}} !important;
-    --badge-notification-background: {{colors.error.default.hex}} !important;
+    --badge-notification-background: {{colors.primary.default.hex}} !important;
+    --background-feedback-notification: {{colors.primary.default.hex}} !important;
     --red-400: {{colors.error.default.hex}} !important;
     --red-430: {{colors.error.default.hex}} !important;
     --red-500: {{colors.error.default.hex}} !important;
@@ -279,4 +280,20 @@
 .theme-light .highlight {
     background: color-mix(in srgb, {{colors.primary.default.hex}} 30%, transparent);
     color: inherit;
+}
+
+/* unread pills + notification badges → primary */
+.theme-dark span[class*="unreadPill"],
+.theme-light span[class*="unreadPill"] {
+    --interactive-text-active: {{colors.primary.default.hex}} !important;
+}
+
+.theme-dark div[class*="numberBadge"],
+.theme-light div[class*="numberBadge"],
+.theme-dark div[class*="newBadge"],
+.theme-light div[class*="newBadge"],
+.theme-dark div[class*="divider"] [class*="endCap"],
+.theme-light div[class*="divider"] [class*="endCap"] {
+    --white: {{colors.on_primary.default.hex}} !important;
+    --white-500: {{colors.on_primary.default.hex}} !important;
 }
