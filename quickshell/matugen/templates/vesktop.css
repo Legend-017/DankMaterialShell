@@ -296,7 +296,9 @@
 .theme-dark div[class*="divider"] [class*="endCap"],
 .theme-light div[class*="divider"] [class*="endCap"],
 .theme-dark span[class*="botTag"],
-.theme-light span[class*="botTag"] {
+.theme-light span[class*="botTag"],
+.theme-dark div[class*="newMessagesBar"],
+.theme-light div[class*="newMessagesBar"] {
     --white: {{colors.on_primary.default.hex}} !important;
     --white-500: {{colors.on_primary.default.hex}} !important;
 }
