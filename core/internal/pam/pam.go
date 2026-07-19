@@ -38,7 +38,8 @@ const (
 // rest cover distros (or minimal installs) with no /etc/pam.d/login.
 // lockscreenPamBaseDirs mirrors libpam's search order: /etc overrides, then the
 // vendor dir (/usr/lib) and the stateless-distro default (/usr/share).
-var lockscreenPamBaseDirs = []string{"/etc/pam.d", "/usr/lib/pam.d", "/usr/share/pam.d"}
+// /usr/local/etc/pam.d is OpenPAM's ports dir on FreeBSD (openpam_configure).
+var lockscreenPamBaseDirs = []string{"/etc/pam.d", "/usr/lib/pam.d", "/usr/share/pam.d", "/usr/local/etc/pam.d"}
 
 // Standalone auth+account services, most universal first. login exists almost
 // everywhere (util-linux); system-* cover Fedora/Arch/Gentoo/SUSE-Leap.
@@ -50,13 +51,15 @@ var lockscreenPamEntryCandidates = []string{
 }
 
 // Fallback for distros with no standalone login service, only shared building
-// blocks: openSUSE/Debian (common-*), Alpine/postmarketOS (base-*).
+// blocks: openSUSE/Debian (common-*), Alpine/postmarketOS (base-*), FreeBSD
+// (system holds both stanzas, included by login).
 var lockscreenPamSharedIncludePairs = []struct {
 	auth    string
 	account string
 }{
 	{auth: "common-auth", account: "common-account"},
 	{auth: "base-auth", account: "base-account"},
+	{auth: "system", account: "system"},
 }
 
 var includedPamAuthFiles = []string{
@@ -67,6 +70,7 @@ var includedPamAuthFiles = []string{
 	"system-local-login",
 	"common-auth-pc",
 	"login",
+	"system",
 }
 
 type AuthSettings struct {
@@ -1268,6 +1272,9 @@ func pamModuleExists(module string) bool {
 		"/usr/lib/aarch64-linux-gnu/security",
 		"/run/current-system/sw/lib64/security",
 		"/run/current-system/sw/lib/security",
+		"/usr/local/lib/security",
+		"/usr/local/lib",
+		"/usr/lib",
 	} {
 		if _, err := os.Stat(filepath.Join(libDir, module)); err == nil {
 			return true

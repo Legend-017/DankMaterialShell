@@ -46,7 +46,8 @@ Singleton {
     property int _geocodeReqId: 0
     property var _pendingCoords: null
 
-    readonly property var lowPriorityCmd: ["nice", "-n", "19", "ionice", "-c3"]
+    // ionice is util-linux only; the BSDs get plain nice
+    readonly property var lowPriorityCmd: Qt.platform.os === "linux" ? ["nice", "-n", "19", "ionice", "-c3"] : ["nice", "-n", "19"]
     readonly property var curlBaseCmd: ["curl", "-sS", "--fail", "--connect-timeout", "3", "--max-time", "6", "--limit-rate", "100k", "--compressed"]
 
     property var weatherIcons: ({

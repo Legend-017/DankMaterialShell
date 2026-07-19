@@ -33,7 +33,7 @@ func setupTestManager(t *testing.T) (*Manager, string) {
 
 	m := &Manager{
 		sysfsBackend: sysfs,
-		sysfsReady:   true,
+		nativeReady:  true,
 		stopChan:     make(chan struct{}),
 	}
 

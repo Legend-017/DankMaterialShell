@@ -43,7 +43,7 @@ func TestManager_SetBrightness_LogindSuccess(t *testing.T) {
 		logindBackend: mockLogind,
 		sysfsBackend:  sysfs,
 		logindReady:   true,
-		sysfsReady:    true,
+		nativeReady:   true,
 		stopChan:      make(chan struct{}),
 	}
 
@@ -114,7 +114,7 @@ func TestManager_SetBrightness_LogindFailsFallbackToSysfs(t *testing.T) {
 		logindBackend: mockLogind,
 		sysfsBackend:  sysfs,
 		logindReady:   true,
-		sysfsReady:    true,
+		nativeReady:   true,
 		stopChan:      make(chan struct{}),
 	}
 
@@ -180,8 +180,9 @@ func TestManager_SetBrightness_NoLogind(t *testing.T) {
 	m := &Manager{
 		logindBackend: nil,
 		sysfsBackend:  sysfs,
+		nativeBackend: sysfs,
 		logindReady:   false,
-		sysfsReady:    true,
+		nativeReady:   true,
 		stopChan:      make(chan struct{}),
 	}
 
@@ -243,7 +244,7 @@ func TestManager_SetBrightness_LEDWithLogind(t *testing.T) {
 		logindBackend: mockLogind,
 		sysfsBackend:  sysfs,
 		logindReady:   true,
-		sysfsReady:    true,
+		nativeReady:   true,
 		stopChan:      make(chan struct{}),
 	}
 
