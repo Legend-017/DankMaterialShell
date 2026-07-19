@@ -159,6 +159,7 @@
 
     /* buttons and controls — on-color state layers */
     --bg-brand: {{colors.primary.default.hex}} !important;
+    --background-brand: {{colors.primary.default.hex}} !important;
     --control-primary-background-default: {{colors.primary.default.hex}} !important;
     --control-primary-background-hover: color-mix(in srgb, {{colors.primary.default.hex}} 92%, {{colors.on_primary.default.hex}}) !important;
     --control-primary-background-active: color-mix(in srgb, {{colors.primary.default.hex}} 85%, {{colors.on_primary.default.hex}}) !important;
@@ -293,7 +294,9 @@
 .theme-dark div[class*="newBadge"],
 .theme-light div[class*="newBadge"],
 .theme-dark div[class*="divider"] [class*="endCap"],
-.theme-light div[class*="divider"] [class*="endCap"] {
+.theme-light div[class*="divider"] [class*="endCap"],
+.theme-dark span[class*="botTag"],
+.theme-light span[class*="botTag"] {
     --white: {{colors.on_primary.default.hex}} !important;
     --white-500: {{colors.on_primary.default.hex}} !important;
 }
