@@ -207,7 +207,7 @@ Item {
 
     Process {
         id: greeterBinaryCheckProcess
-        command: ["sh", "-c", "test -f /usr/bin/dms-greeter || test -f /usr/local/bin/dms-greeter"]
+        command: ["sh", "-c", "command -v dms-greeter >/dev/null 2>&1"]
         running: false
 
         onExited: exitCode => {
